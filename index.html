@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Management System - Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-page">
+    <div class="container">
+        <div class="row justify-content-center align-items-center min-vh-100">
+            <div class="col-md-10 col-lg-8">
+                <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+                    <div class="row g-0">
+                        <!-- Left Side - Branding -->
+                        <div class="col-md-5 bg-gradient-primary text-white p-5 d-flex flex-column justify-content-center">
+                            <div class="text-center mb-4">
+                                <i class="fas fa-calendar-check display-1 mb-3"></i>
+                                <h2 class="fw-bold">Leave Management</h2>
+                                <p class="lead">Streamline your leave requests</p>
+                            </div>
+                            <div class="mt-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-check-circle me-3 fs-4"></i>
+                                    <span>Easy leave application</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-check-circle me-3 fs-4"></i>
+                                    <span>Real-time status tracking</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-check-circle me-3 fs-4"></i>
+                                    <span>Complete leave history</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Side - Login Form -->
+                        <div class="col-md-7 p-5">
+                            <div class="login-form-container">
+                                <h3 class="fw-bold mb-4 text-center">Welcome Back!</h3>
+                                
+                                <!-- Alert Messages -->
+                                <div id="alertContainer"></div>
+
+                                <!-- Login Form -->
+                                <form id="loginForm">
+                                    <div class="mb-3">
+                                        <label for="loginEmail" class="form-label">
+                                            <i class="fas fa-envelope me-2"></i>Email Address
+                                        </label>
+                                        <input type="email" class="form-control form-control-lg" id="loginEmail" 
+                                               placeholder="Enter your email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="loginPassword" class="form-label">
+                                            <i class="fas fa-lock me-2"></i>Password
+                                        </label>
+                                        <input type="password" class="form-control form-control-lg" id="loginPassword" 
+                                               placeholder="Enter your password" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-lg w-100 mb-3">
+                                        <i class="fas fa-sign-in-alt me-2"></i>Login
+                                    </button>
+                                </form>
+
+                                <div class="text-center">
+                                    <p class="mb-0">Don't have an account? 
+                                        <a href="#" id="showRegisterForm" class="text-primary fw-semibold">Register here</a>
+                                    </p>
+                                </div>
+
+                                <!-- Register Form (Hidden by default) -->
+                                <form id="registerForm" style="display: none;">
+                                    <div class="mb-3">
+                                        <label for="registerName" class="form-label">
+                                            <i class="fas fa-user me-2"></i>Full Name
+                                        </label>
+                                        <input type="text" class="form-control form-control-lg" id="registerName" 
+                                               placeholder="Enter your full name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="registerEmail" class="form-label">
+                                            <i class="fas fa-envelope me-2"></i>Email Address
+                                        </label>
+                                        <input type="email" class="form-control form-control-lg" id="registerEmail" 
+                                               placeholder="Enter your email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="registerPassword" class="form-label">
+                                            <i class="fas fa-lock me-2"></i>Password
+                                        </label>
+                                        <input type="password" class="form-control form-control-lg" id="registerPassword" 
+                                               placeholder="Create a password (min 6 characters)" required minlength="6">
+                                    </div>
+                                    <button type="submit" class="btn btn-success btn-lg w-100 mb-3">
+                                        <i class="fas fa-user-plus me-2"></i>Register
+                                    </button>
+                                </form>
+
+                                <div class="text-center" id="backToLoginContainer" style="display: none;">
+                                    <p class="mb-0">Already have an account? 
+                                        <a href="#" id="showLoginForm" class="text-primary fw-semibold">Login here</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
